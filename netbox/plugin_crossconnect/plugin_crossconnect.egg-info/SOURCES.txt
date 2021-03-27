@@ -4,6 +4,7 @@ plugin_crossconnect/admin.py
 plugin_crossconnect/models.py
 plugin_crossconnect/navigation.py
 plugin_crossconnect/urls.py
+plugin_crossconnect/views.py
 plugin_crossconnect.egg-info/PKG-INFO
 plugin_crossconnect.egg-info/SOURCES.txt
 plugin_crossconnect.egg-info/dependency_links.txt

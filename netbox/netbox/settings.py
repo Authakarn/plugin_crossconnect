@@ -77,7 +77,7 @@ CORS_ORIGIN_WHITELIST = getattr(configuration, 'CORS_ORIGIN_WHITELIST', [])
 DATE_FORMAT = getattr(configuration, 'DATE_FORMAT', 'N j, Y')
 DATETIME_FORMAT = getattr(configuration, 'DATETIME_FORMAT', 'N j, Y g:i a')
 DEBUG = getattr(configuration, 'DEBUG', False)
-DEVELOPER = getattr(configuration, 'DEVELOPER', False)
+DEVELOPER = getattr(configuration, 'DEVELOPER', True)
 DOCS_ROOT = getattr(configuration, 'DOCS_ROOT', os.path.join(os.path.dirname(BASE_DIR), 'docs'))
 EMAIL = getattr(configuration, 'EMAIL', {})
 ENFORCE_GLOBAL_UNIQUE = getattr(configuration, 'ENFORCE_GLOBAL_UNIQUE', False)
@@ -291,7 +291,9 @@ INSTALLED_APPS = [
     'utilities',
     'virtualization',
     'django_rq',  # Must come after extras to allow overriding management commands
-    'drf_yasg'
+    'drf_yasg',
+    # 'plugin_crossconnect',
+
     
 ]
 
@@ -318,10 +320,11 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'netbox.urls'
 
 TEMPLATES_DIR = BASE_DIR + '/templates'
+# TEMPLATES_DIR = '/opt/netbox/netbox/plugin_crossconnect/plugin_crossconnect/templates'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR],
+        'DIRS': [TEMPLATES_DIR,'/opt/netbox/netbox/plugin_crossconnect/plugin_crossconnect/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

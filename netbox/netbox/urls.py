@@ -45,6 +45,7 @@ _patterns = [
     path('tenancy/', include('tenancy.urls')),
     path('user/', include('users.urls')),
     path('virtualization/', include('virtualization.urls')),
+    #path('plugin_crossconnect/', include('plugin_crossconnect.urls')),
 
     # API
     path('api/', APIRootView.as_view(), name='api-root'),

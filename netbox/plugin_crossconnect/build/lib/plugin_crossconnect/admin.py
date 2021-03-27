@@ -4,4 +4,4 @@ from .models import plugin_crossconnect
 @admin.register(plugin_crossconnect)
 class plugin_crossconnectadmin(admin.ModelAdmin):
     #list_display = ("customer")
-    list_display = ("customer","col2")
+    list_display = ("customer","routetypes")
