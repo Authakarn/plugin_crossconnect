@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load helpers %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <strong>Crossconnect</strong>
+            </div>
+            <table class="table table-hover panel-body attr-table">
+                <tr>
+                    <td>CircuitID</td>
+                    <td>
+                        {{ plugin_crossconnect.circuitid }}                     
+                    </td>
+                </tr>
+                <!-- <tr>
+                    <td>Customer</td>
+                    <td>
+                        <a href="{% url 'tenancy.tenant' pk=plugin_crossconnect.customer.pk %}">{{ plugin_crossconnect.customer }}</a>
+                    </td>
+                </tr> -->
+                <tr>
+                    <td>Route Type</td>
+                    <td>{{ plugin_crossconnect.routetypes }}</td>
+                </tr>
+                <!-- <tr>
+                    <td>Telco Name</td>
+                    <td>
+                        <a href="{% url 'circuits.provider' pk=plugin_crossconnect.telconame.pk %}">{{ plugin_crossconnect.telconame }}</a>
+                    </td>
+                </tr> -->
+                <tr>
+                    <td>Telco CID</td>
+                    <td>{{ plugin_crossconnect.telcocid}}</td>
+                </tr>
+                <tr>
+                    <td>Termination A</td>
+                    <td>{{ plugin_crossconnect.terminationa }}</td>
+                </tr>
+                <tr>
+                    <td>Termination A Row No.</td>
+                    <td>{{ plugin_crossconnect.terminalAtelcorownumber }}</td>
+                </tr>
+                <tr>
+                    <td>Termination A Rack Unit</td>
+                    <td>{{ plugin_crossconnect.terminalArackunit }}</td>
+                </tr>
+                <tr>
+                    <td>Termination A Port No.</td>
+                    <td>{{ plugin_crossconnect.terminalAportnumber }}</td>
+                </tr>
+                <tr>
+                    <td>Termination B</td>
+                    <td>{{ plugin_crossconnect.terminationb }}</td>
+                </tr>
+                <tr>
+                    <td>Termination B Row No.</td>
+                    <td>{{ plugin_crossconnect.terminationBtelcorownumber }}</td>
+                </tr>
+                <tr>
+                    <td>Termination B Rack Unit</td>
+                    <td>{{ plugin_crossconnect.terminationBrackunit }}</td>
+                </tr>
+                <tr>
+                    <td>Termination B Port No.</td>
+                    <td>{{ plugin_crossconnect.terminationBportnumber }}</td>
+                </tr>
+                <tr>
+                    <td>Connector Type</td>
+                    <td>{{ plugin_crossconnect.connectortype }}</td>
+                </tr>
+                <tr>
+                    <td>Cable Type</td>
+                    <td>{{ plugin_crossconnect.cabletype }}</td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td>{{ plugin_crossconnect.description }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

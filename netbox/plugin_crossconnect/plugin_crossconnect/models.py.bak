@@ -1,0 +1,23 @@
+from django.db import models
+#from extras.models import ChangeLoggedModel
+
+class plugin_crossconnect(models.Model):
+     #customer = models.ForeignKey(to="dcim.Tenants",on_delete=models.DO_NOTHING,)
+     customer = models.ForeignKey(to="tenancy.tenants",on_delete=models.PROTECT)
+     col2 = models.CharField(blank=True,max_length=50)
+     col3 = models.CharField(blank=True,max_length=50)
+     ROUTE_TYPES = models.TextChoices('Short Route','Long Route')
+     routetypes = models.CharField(blank=False,choices=ROUTE_TYPES.choices)
+     teminationa = 
+     telconame = model.ForeignKey()
+#      def __str__(self):
+#         return self.customer
+
+# class plugin_crossconnect(models.Model):
+#     name = models.CharField(max_length=50)
+#     sound = models.CharField(max_length=50)
+
+
+
+# class plugin_crossconnect(models.Model):
+#     customer = models.CharField(max_length=50
